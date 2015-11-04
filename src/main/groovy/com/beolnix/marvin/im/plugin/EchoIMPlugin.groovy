@@ -18,11 +18,11 @@ import org.osgi.framework.BundleContext
  */
 class EchoIMPlugin implements IMPlugin {
 
-    Logger logger;
+    private Logger logger;
 
-    IMSessionManager imSessionManager
-    IMPluginState state = IMPluginState.NOT_INITIALIZED;
-    String errMsg
+    private IMSessionManager imSessionManager
+    private IMPluginState state = IMPluginState.NOT_INITIALIZED;
+    private String errMsg
 
     public EchoIMPlugin(BundleContext bundleContext) {
         logger = new PluginUtils().getLogger(bundleContext, getPluginName())
@@ -39,7 +39,7 @@ class EchoIMPlugin implements IMPlugin {
     }
 
     IMPluginState getPluginState() {
-        return IMPluginState.INITIALIZED
+        return state
     }
 
     public Boolean isProcessAll() {
