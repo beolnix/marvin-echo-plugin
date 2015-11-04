@@ -29,3 +29,7 @@ If everything is fine, you find **echo-plugin-0.1.jar** in **build/libs/**
 To deploy the plugin simply copy it to the plugins directory of [marvin](https://github.com/beolnix/marvin-core/) bot.
 No restart is required, marvin will pick it up on the fly and tell you about it in his **logs/application-main.log**.
 Once it is deployed simply send a message directly to the bot or to the conference with it.
+
+## Troubleshooting
+* Be careful with content in **MANIFEST.MF**. Most likely plugin can't be deployed because of format violations in it. In the gradle script of this example special magic happens with version before it is saved in **MANIFEST.MF**. It is better to do just the same in your plugin.
+* Another possible reason is in classpath specified in **MANIFEST.MF**. It is better to keep it constructed automatically as it is implemented in gradle script of this plugin.
