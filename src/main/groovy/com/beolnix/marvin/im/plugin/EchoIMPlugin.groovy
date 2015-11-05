@@ -1,9 +1,9 @@
 package com.beolnix.marvin.im.plugin
 
 
-import com.beolnix.marvin.im.api.IMIncomingMessage
-import com.beolnix.marvin.im.api.IMOutgoingMessage
-import com.beolnix.marvin.im.api.IMOutgoingMessageBuilder
+import com.beolnix.marvin.im.api.model.IMIncomingMessage
+import com.beolnix.marvin.im.api.model.IMOutgoingMessage
+import com.beolnix.marvin.im.api.model.IMOutgoingMessageBuilder
 import com.beolnix.marvin.im.api.IMSessionManager
 import com.beolnix.marvin.plugins.api.IMPlugin
 import com.beolnix.marvin.plugins.api.IMPluginState
@@ -38,11 +38,16 @@ class EchoIMPlugin implements IMPlugin {
         return ['*']
     }
 
+    @Override
+    boolean isCommandSupported(String s) {
+        return true
+    }
+
     IMPluginState getPluginState() {
         return state
     }
 
-    public Boolean isProcessAll() {
+    public boolean isProcessAll() {
         return true
     }
 
