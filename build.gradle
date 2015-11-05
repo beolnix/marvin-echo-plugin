@@ -21,6 +21,9 @@ repositories {
     maven {
         url "http://nexus.beolnix.com/content/repositories/releases/"
     }
+    maven {
+        url "http://nexus.beolnix.com/content/repositories/snapshots/"
+    }
 }
 
 uploadArchives {
@@ -49,7 +52,7 @@ sourceSets {
 }
 
 
-dependencies {    
+dependencies {        
     compile "com.beolnix.marvin:api:0.2-SNAPSHOT"
     compile "com.beolnix.marvin:plugin-utils:0.2-SNAPSHOT"
     compile "org.apache.felix:org.apache.felix.framework:4.0.1"
