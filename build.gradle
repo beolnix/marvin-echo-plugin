@@ -8,12 +8,21 @@ def BUNDLE_NAME = 'Echo plugin'
 def BUNDLE_DESC = 'test plugin which can only answer constant string'
 def VENDOR = 'com.beolnix'
 
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
+def JDK_VERSION = '1.8'
+def MARVIN_API_VERSION = '0.2-SNAPSHOT'
+def MARVIN_UTILS_VERSION = '0.2-SNAPSHOT'
+def LOG4J_VERSION = '1.2.16'
+def FELIX_VERSION = '4.0.1'
+def GROOVY_VERSION = '2.4.4'
+def JUNIT_VERSION = '4.12'
+
+sourceCompatibility = JDK_VERSION
+targetCompatibility = JDK_VERSION
 System.setProperty("file.encoding", "UTF-8")
 
 project.group = 'com.beolnix.marvin'
 project.version = '0.2-SNAPSHOT'
+
 
 repositories {
     mavenCentral()
@@ -53,15 +62,15 @@ sourceSets {
 
 
 dependencies {
-    compile "com.beolnix.marvin:marvin-api:0.2-SNAPSHOT"
-    compile "com.beolnix.marvin:marvin-plugin-utils:0.2-SNAPSHOT"
-    compile "org.apache.felix:org.apache.felix.framework:4.0.1"
+    compile group: 'com.beolnix.marvin', name: 'marvin-api', version: MARVIN_API_VERSION, changing: true
+    compile "com.beolnix.marvin:marvin-plugin-utils:${MARVIN_UTILS_VERSION}"
+    compile "org.apache.felix:org.apache.felix.framework:${FELIX_VERSION}"
 
-    compile "org.codehaus.groovy:groovy-all:2.4.4"
+    compile "org.codehaus.groovy:groovy-all:${GROOVY_VERSION}"
 
-    compile "log4j:log4j:1.2.16"
+    compile "log4j:log4j:${LOG4J_VERSION}"
 
-    testCompile "junit:junit:4.12"
+    testCompile "junit:junit:${JUNIT_VERSION}"
 }
 
 jar {
