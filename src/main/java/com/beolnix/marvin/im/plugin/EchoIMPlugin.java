@@ -21,7 +21,7 @@ public class EchoIMPlugin implements IMPlugin {
 
     private IMSessionManager imSessionManager;
     private IMPluginState state = IMPluginState.NOT_INITIALIZED;
-    private String errMsg;
+    private String errMsg = null;
 
     public EchoIMPlugin(BundleContext bundleContext) {
         logger = new PluginUtils().getLogger(bundleContext, getPluginName());
