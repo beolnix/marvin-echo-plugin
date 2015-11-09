@@ -1,5 +1,5 @@
 ## Project description
-Example echo plugin for [marvin](https://github.com/beolnix/marvin-core/) bot.
+Example echo plugin for [marvin](https://github.com/beolnix/marvin/) bot.
 Plugin just sends back received message. It is a demonstration of how the plugins for marvin bot should be created. 
 
 ## Project details
@@ -26,7 +26,7 @@ gradle clean build
 If everything is fine, you find **echo-plugin-0.1.jar** in **build/libs/** 
 
 ## Usage 
-To deploy the plugin simply copy it to the plugins directory of [marvin](https://github.com/beolnix/marvin-core/) bot.
+To deploy the plugin simply copy it to the plugins directory of [marvin](https://github.com/beolnix/marvin/) bot.
 No restart is required, marvin will pick it up on the fly and tell you about it in his **logs/application-main.log**.
 Once it is deployed simply send a message directly to the bot or to the conference with it.
 
