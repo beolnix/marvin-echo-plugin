@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Created by DAtmakin on 11/9/2015.
+ * Created by beolnix on 11/9/2015.
  */
 public class EchoIMPlugin implements IMPlugin {
     private Logger logger;
