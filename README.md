@@ -5,8 +5,8 @@ Plugin just sends back received message. It is a demonstration of how the plugin
 ## Project details
 | Version | State | Source code | Binaries |
 | --- | --- | --- | --- |
-| 0.1 | Stable | [0.1-release](https://github.com/beolnix/marvin-echo-plugin/releases/tag/0.1-release) | [echo-plugin-0.1.jar](http://nexus.beolnix.com/service/local/repositories/releases/content/com/beolnix/marvin/echo-plugin/0.1/echo-plugin-0.1.jar) |
-| 0.2-SNAPSHOT | In dev | [master](https://github.com/beolnix/marvin-echo-plugin) |  |
+| 0.2 | Stable | [0.2-release](https://github.com/beolnix/marvin-echo-plugin/releases/tag/0.2-release) | [echo-plugin-0.2.jar](http://nexus.beolnix.com/service/local/repositories/releases/content/com/beolnix/marvin/echo-plugin/0.2/echo-plugin-0.2.jar) |
+| 0.3-SNAPSHOT | In dev | [master](https://github.com/beolnix/marvin-echo-plugin) |  |
 
 ## Requirements
 #### To run
