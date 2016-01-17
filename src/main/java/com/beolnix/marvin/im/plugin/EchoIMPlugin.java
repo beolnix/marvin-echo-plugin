@@ -1,5 +1,6 @@
 package com.beolnix.marvin.im.plugin;
 
+import com.beolnix.marvin.config.api.model.PluginConfig;
 import com.beolnix.marvin.im.api.IMSessionManager;
 import com.beolnix.marvin.im.api.model.IMIncomingMessage;
 import com.beolnix.marvin.im.api.model.IMOutgoingMessage;
@@ -69,6 +70,11 @@ public class EchoIMPlugin implements IMPlugin {
     public void setIMSessionManager(IMSessionManager imSessionManagerFacade) {
         this.imSessionManager = imSessionManagerFacade;
         this.state = IMPluginState.INITIALIZED;
+    }
+
+    @Override
+    public void setPluginConfig(PluginConfig pluginConfig) {
+        // nop since echo plugin doesn't need any configuration
     }
 
     @Override
