@@ -1,14 +1,13 @@
 package com.beolnix.marvin.im.plugin;
 
-import com.beolnix.marvin.config.api.model.PluginConfig;
 import com.beolnix.marvin.im.api.IMSessionManager;
 import com.beolnix.marvin.im.api.model.IMIncomingMessage;
 import com.beolnix.marvin.im.api.model.IMOutgoingMessage;
 import com.beolnix.marvin.im.api.model.IMOutgoingMessageBuilder;
 import com.beolnix.marvin.plugins.api.IMPlugin;
 import com.beolnix.marvin.plugins.api.IMPluginState;
+import com.beolnix.marvin.plugins.api.PluginConfig;
 import org.apache.log4j.Logger;
-import org.osgi.framework.BundleContext;
 
 import java.util.Collections;
 import java.util.List;
@@ -24,8 +23,11 @@ public class EchoIMPlugin implements IMPlugin {
     private IMPluginState state = IMPluginState.NOT_INITIALIZED;
     private String errMsg = null;
 
-    public EchoIMPlugin(BundleContext bundleContext) {
-        logger = new PluginUtils().getLogger(bundleContext, getPluginName());
+    @Override
+    public void init(PluginConfig pluginConfig, IMSessionManager imSessionManager) {
+        this.logger = pluginConfig.getLogger();
+        this.imSessionManager = imSessionManager;
+        this.state = IMPluginState.INITIALIZED;
     }
 
     @Override
@@ -64,17 +66,6 @@ public class EchoIMPlugin implements IMPlugin {
                 .withFromPlugin(getPluginName())
                 .build();
         imSessionManager.sendMessage(outMsg);
-    }
-
-    @Override
-    public void setIMSessionManager(IMSessionManager imSessionManagerFacade) {
-        this.imSessionManager = imSessionManagerFacade;
-        this.state = IMPluginState.INITIALIZED;
-    }
-
-    @Override
-    public void setPluginConfig(PluginConfig pluginConfig) {
-        // nop since echo plugin doesn't need any configuration
     }
 
     @Override

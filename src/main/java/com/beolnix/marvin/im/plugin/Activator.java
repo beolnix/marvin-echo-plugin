@@ -13,7 +13,7 @@ import org.osgi.framework.BundleContext;
 public class Activator implements BundleActivator {
     @Override
     public void start(BundleContext context) {
-        IMPlugin plugin = new EchoIMPlugin(context);
+        IMPlugin plugin = new EchoIMPlugin();
         context.registerService(IMPlugin.class.getName(), plugin, null);
     }
 
