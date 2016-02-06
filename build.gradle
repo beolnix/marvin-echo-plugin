@@ -68,8 +68,6 @@ dependencies {
 
     compile "org.codehaus.groovy:groovy-all:${GROOVY_VERSION}"
 
-    compile "log4j:log4j:${LOG4J_VERSION}"
-
     testCompile "junit:junit:${JUNIT_VERSION}"
 }
 

@@ -25,7 +25,8 @@ public class EchoIMPlugin implements IMPlugin {
 
     @Override
     public void init(PluginConfig pluginConfig, IMSessionManager imSessionManager) {
-        this.logger = pluginConfig.getLogger();
+        PluginUtils pluginUtils = new PluginUtils();
+        this.logger = pluginUtils.getLogger(pluginConfig.getLogsDirPath(), getPluginName());
         this.imSessionManager = imSessionManager;
         this.state = IMPluginState.INITIALIZED;
     }
