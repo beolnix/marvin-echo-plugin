@@ -3,10 +3,10 @@ Example echo plugin for [marvin](https://github.com/beolnix/marvin/) bot.
 Plugin just sends back received message. It is a demonstration of how the plugins for marvin bot should be created. 
 
 ## Project details
-| Version | State | Source code | Binaries |
+| Version | State | Source code |
 | --- | --- | --- | --- |
-| 0.2 | Stable | [0.2-release](https://github.com/beolnix/marvin-echo-plugin/releases/tag/0.2-release) | [marvin-echo-plugin-0.2.jar](http://nexus.beolnix.com/service/local/repositories/releases/content/com/beolnix/marvin/marvin-echo-plugin/0.2/marvin-echo-plugin-0.2.jar) |
-| 0.3-SNAPSHOT | In dev | [master](https://github.com/beolnix/marvin-echo-plugin) |  |
+| 0.2 | Stable | [0.2-release](https://github.com/beolnix/marvin-echo-plugin/releases/tag/0.2-release) |
+| 0.3-SNAPSHOT | In dev | [master](https://github.com/beolnix/marvin-echo-plugin) |
 
 ## Requirements
 #### To run
